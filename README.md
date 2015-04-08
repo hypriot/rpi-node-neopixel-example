@@ -19,7 +19,7 @@ $ docker build -t node-neopixel .
 
 ## Running the example
 
-Now run the example web server with
+Now run the NeoPixel example app with
 
 ```bash
 $ docker run --cap-add SYS_RAWIO --device /dev/mem -d node-neopixel
