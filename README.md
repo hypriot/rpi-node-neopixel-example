@@ -1,5 +1,7 @@
 # Drive Adafruit's NeoPixel with Node.js in Docker on a Raspberry Pi
 
+**Work in progress**: Doesn't work on RPi 2 yet.
+
 ## Building the image
 
 On your Raspberry Pi you can clone this example with
@@ -20,7 +22,7 @@ $ docker build -t node-neopixel .
 Now run the example web server with
 
 ```bash
-$ docker run -p 80:80 --cap-add SYS_RAWIO --device /dev/mem -d node-neopixel
+$ docker run --cap-add SYS_RAWIO --device /dev/mem -d node-neopixel
 ```
 
 ## License
