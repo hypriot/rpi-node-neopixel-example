@@ -1,0 +1,10 @@
+{
+  "name": "rpi-node-neopixel-example",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Node.js NeoPixel app in docker",
+  "author": "hypriot.com",
+  "dependencies": {
+    "rpi-ws281x-native": "0.4.0"
+  }
+}
