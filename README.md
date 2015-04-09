@@ -1,5 +1,7 @@
 # Drive Adafruit's NeoPixel with Node.js in Docker on a Raspberry Pi
 
+This is a code example written in Node.js for a blog post on  [blog.hypriot.com](http://blog.hypriot.com/post/drive-neopixels-in-docker/).
+
 ## Building the image
 
 On your Raspberry Pi you can clone this example with
