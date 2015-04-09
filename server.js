@@ -5,14 +5,24 @@ var NUM_LEDS = parseInt(process.argv[2], 10) || 8,
 
 ws281x.init(NUM_LEDS);
 
-// ---- trap the SIGINT and reset before exit
-process.on('SIGINT', function () {
-  console.log('got SIGINT');
+var lightsOff = function () {
   for (var i = 0; i < NUM_LEDS; i++) {
     pixelData[i] = rgb2Int(0, 0, 0);
   }
   ws281x.render(pixelData);
   ws281x.reset();
+}
+
+// ---- trap the SIGINT and reset before exit
+process.on('SIGINT', function () {
+  lightsOff();
+  console.log('got SIGINT');
+  process.nextTick(function () { process.exit(0); });
+});
+
+process.on('SIGTERM', function () {
+  console.log('got SIGTERM');
+  lightsOff();
   process.nextTick(function () { process.exit(0); });
 });
 
