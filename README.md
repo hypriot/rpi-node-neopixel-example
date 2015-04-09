@@ -19,11 +19,23 @@ $ docker build -t node-neopixel .
 
 ## Running the example
 
-Now run the NeoPixel example app with
+Now run the NeoPixel example app on a Raspberry Pi B/B+ with this command
 
 ```bash
 $ docker run --cap-add SYS_RAWIO --device /dev/mem -d node-neopixel
 ```
+
+On the Raspberry Pi 2 use this command
+
+```bash
+$ docker run --privileged -d node-neopixel
+```
+## Acknowlegement
+
+Thanks to
+
+* @usefulthink to create the Node.js module - https://github.com/raspberry-node/node-rpi-ws281x-native
+* @richardghirst to port the WS281x library to Raspberry Pi 2 - https://github.com/richardghirst/rpi_ws281x
 
 ## License
 
