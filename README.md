@@ -1,6 +1,6 @@
 # Drive Adafruit's NeoPixel with Node.js in Docker on a Raspberry Pi
 
-**Work in progress**: Doesn't work on RPi 2 yet.
+This is a code example written in Node.js for a blog post on  [blog.hypriot.com](http://blog.hypriot.com/post/drive-neopixels-in-docker/).
 
 ## Building the image
 
@@ -25,12 +25,13 @@ Now run the NeoPixel example app on a Raspberry Pi B/B+ with this command
 $ docker run --cap-add SYS_RAWIO --device /dev/mem -d node-neopixel
 ```
 
-On the Raspberry Pi 2 use this command
+On the Raspberry Pi 2 you have to use this command
 
 ```bash
 $ docker run --privileged -d node-neopixel
 ```
-## Acknowlegement
+
+## Acknowlegements
 
 Thanks to
 
