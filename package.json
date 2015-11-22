@@ -5,6 +5,6 @@
   "description": "Node.js NeoPixel app in docker",
   "author": "hypriot.com",
   "dependencies": {
-    "rpi-ws281x-native": "0.5.0"
+    "rpi-ws281x-native": "0.7.2"
   }
 }
